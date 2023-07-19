@@ -14,7 +14,7 @@
 
 
 <style>
-  * {
+  *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -25,7 +25,7 @@
     overflow-x : hidden;
   }
 
-  header {
+  header{
     width: 100vw;
     height: 10vh;
     display: flex;
@@ -35,65 +35,53 @@
     color: white;
   }
 
-  nav ul {
+  nav ul{
     display: flex;
     list-style: none;
     width: 40vw;
     justify-content: space-around;
   }
 
-  nav ul li {
+  nav ul li{
     padding: 10px;
   }
 
-  nav ul li:hover {
+  nav ul li:hover{
     background-color: darkgray;
     border-radius: 2px;
   }
 
-  nav ul a {
+  nav ul a{
     text-decoration: none;
     color: white;
   }
 
-  main {
+  main{
     width: 100vw;
-    
-  }
-  main img {
-    width: 200px;
-    height: 260px;
+    background-color: rgba(0, 0, 0, 0.7);  
   }
 
-  .apresentacao {
+  .apresentacao{
     width: 100vw;
     height: 40vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 50px;
     background-color: rgba(0, 0, 0, 0.7);
+    gap: 50px;
     color: white;
   }
-
-  .apresentacao::before {
-    content: "";
-    background-image: url('./imagens/psg1.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100vw;
-    height: 50vh;
-    position: absolute;
-    z-index: -1;
-    opacity: 0.8;
+  .apresentacao img{
+    width: 200px;
   }
-
 
   .apresentacao-text,
   .conhecimento-text {
     width: 25vw;
+    display: flex;
+    flex-direction: column;
     text-align: justify;
+    gap: 20px;
   }
 
   .dados,
@@ -114,6 +102,10 @@
     gap: 10px;
   }
 
+  .dados img{
+    border-radius: 100%;
+  }
+
   .objetivos{
     width: 100vw;
     height: auto;
@@ -124,11 +116,18 @@
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
     padding: 30px;
-    /* background-image: url('./imagens/psg2.jpg'); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
   }
+
+  .objetivos img,
+  .conhecimento img,
+  .dados img{
+    width: 400px
+  }
+
+
 
   .obj-text{
     display: flex;
@@ -138,16 +137,10 @@
     gap: 10px;
   }
 
-  .contato {
-    width: 100vw;
-    height: 40vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-    background-color: black;
-    color: white;
+  .educacao div{
+    width: 30vw;
   }
+
 
   .conhecimento{
     width: 100vw;
@@ -160,6 +153,106 @@
     color: white;
     padding: 30px;
   }
+  .contato {
+    width: 100vw;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    background-color: black;
+    color: white;
+  }
+
+  .contato ul{
+    display: flex;
+    list-style: none;
+    width: 60vw;
+    justify-content: space-around;
+  }
+  .contato ul li{
+    padding: 30px;
+    background-color: rgba(48, 47, 48, 0.576);
+    border-radius: 100%;
+  }
+
+  .contato ul li:hover{
+    background-color: rgba(48, 47, 48, 0.25);
+  }
+  .contato ul li:hover img{
+    opacity: .5;
+  }
+
+  .contato img{
+    width: 30px;
+  }
+
+  @media (max-width: 500px){
+    header nav{
+      display:none;
+    }
+
+    .apresentacao{
+      padding: 20px;
+      height: auto;
+      flex-direction: column;
+    }
+
+    .apresentacao-text{
+      width: 80vw;
+    }
+
+    .dados{
+      padding: 20px;
+      height: auto;
+      flex-direction: column-reverse;
+    }
+
+    .dados img{
+      width: 250px;
+      height: 200px;
+    }
+
+    .objetivos{
+      height: auto;
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    .obj-text{
+      width: 80vw;
+    }
+
+    .educacao{
+      height: auto;
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    .educacao div{
+      width: 80vw;
+    }
+
+    .conhecimento{
+      height: auto;
+      flex-direction: column;
+      padding: 20px;
+    }
+    .conhecimento-text{
+      width: 80vw;
+    }
+
+    .contato ul{
+      width: 100vw;
+    }
+
+    .contato ul li{
+      padding: 10px;
+    }
+
+  }
+
 
 
 
@@ -203,125 +296,83 @@
     <section class="dados" id="informacoesPessoais">
       <div class="dados-text">
         <h2>Dados Pessoais</h2>
-        <h3>
-          Algumas informações Pessoais:
-        </h3>
         <ul>
           <li><strong>NOME COMPLETO: </strong>Kayra da Silva Cardoso </li>
           <li><strong>ENDEREÇO: </strong>Paranavaí, PR - Brasil</li>
           <li><strong>TELEFONE: </strong><a href="tel:+5544991270271">(44) 9 9127-0271</a></li>
         </ul>
       </div>
-      <img src="./imagens/img2.jpg" alt="Foto de perfil" class="perfil">
+      <img src="https://img.freepik.com/fotos-premium/isolado-de-um-jovem-hacker-desconhecido-sentado-jogando-laptop-com-muito-dinheiro_568847-888.jpg" alt="Foto ilustrativa">
     </section>
     <section class="objetivos" id="objetivos">
-      <img src="https://img.imageboss.me/revista-cdn/cdn/29650/60980039d79e60e9fdc72d7acded2ba6c25b4f9d.png?1591133587" alt="Foto de perfil" class="perfil">
+      <img src="https://img.imageboss.me/revista-cdn/cdn/29650/60980039d79e60e9fdc72d7acded2ba6c25b4f9d.png?1591133587" alt="Foto ilustrativa">
       <div class="obj-text">
         <h2>Objetivos</h2>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium quae voluptatum, culpa animi maiores aliquam amet nostrum maxime earum a nulla natus est soluta doloremque velit ducimus accusamus adipisci assumenda repellendus, ea deleniti! Libero facilis corrupti at reiciendis sed temporibus itaque quae. Magni autem optio cupiditate debitis totam cum officia iste accusantium corporis, earum asperiores ut explicabo vitae, iure in eligendi rem impedit doloribus nobis veniam quaerat? Reprehenderit repellendus itaque ex, quidem deleniti illum accusamus velit voluptatibus similique ipsam ipsa! Pariatur sunt autem repudiandae asperiores repellat! Amet harum, vitae et voluptas magnam libero nam repellendus aliquam voluptatibus id quia sunt?</p>
+        <p>Quero me especializar na área FullStack!
+          Gostaria de ter meu primeiro emprego na área.
+          Fico a disposição e, desde já, agradeço!
+        </p>
       </div>
     </section>
     <section class="educacao" id="educacao">
-      <div class="formacoes">
-        <h2>Formações Acadêmicas</h2>
-        <ul>
-          <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae, laudantium.</li>
-          <li>Minus autem dolore id velit nihil dolorum dignissimos ducimus atque!</li>
-          <li>Incidunt minus optio alias perspiciatis hic ipsa cumque repellendus ut!</li>
-          <li>Perferendis impedit et ducimus ullam qui esse temporibus. Tempore, exercitationem?</li>
-          <li>Autem a maxime voluptate est incidunt mollitia impedit fugit ea.</li>
-        </ul>
-      </div>
       <div class="cursos">
         <h2>Cursos Complementares</h2>
         <ul>
-          <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae, laudantium.</li>
-          <li>Minus autem dolore id velit nihil dolorum dignissimos ducimus atque!</li>
-          <li>Incidunt minus optio alias perspiciatis hic ipsa cumque repellendus ut!</li>
-          <li>Perferendis impedit et ducimus ullam qui esse temporibus. Tempore, exercitationem?</li>
-          <li>Autem a maxime voluptate est incidunt mollitia impedit fugit ea.</li>
+          <li>Assistente Administrativo</li>
+          <li>Mundo do Trabalho</li>
+          <li>Programador de Sistemas</li>
+          <li>Minicurso Terapeuta de resultados</li>
+          <li>Gestão de Projetos</li>
+          <li>Python</li>
+          <li>Java</li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScrip</li>
+          <li>Empregabilidade Instituto PROA - <span>Cursando</span></li>
+          <li>Front-End no Vai na Web - <span>Cursando</span></li>
+          <li>Back-End em Java na Alura - <span>Cursando</span></li>
+          <li>Desenvolvimento em Python para Web na IBM - <span>Cursando</span></li>
+        </ul>
+      </div>
+      <div class="formacoes">
+        <h2>Formações Acadêmicas</h2>
+        <ul>
+          <li>Ensino Médio - Completo - SESI</li>
+          <li>Graduação em Análise e desenvolvimento de Sistemas - <span>Cursando</span> - Unicesumar</li>
+          <li>Desenvolvimento de Sistemas - Completo - Senai</li>
         </ul>
       </div>
     </section>
     <section class="conhecimento" id="conhecimento">
-      <img src="./imagens/psg1.jpg" alt="Foto de perfil" class="perfil">
+      <img src="https://t3.ftcdn.net/jpg/05/56/29/10/360_F_556291020_q2ieMiOCKYbtoLITrnt7qcSL1LJYyWrU.jpg" alt="Foto ilustrativa">
       <div class="conhecimento-text">
         <h2>O que eu sei fazer</h2>
-        <p>Laudantium quae voluptatum, culpa animi maiores aliquam amet nostrum maxime earum a nulla natus est soluta doloremque velit ducimus accusamus adipisci assumenda repellendus, ea deleniti! Libero facilis corrupti at reiciendis sed temporibus itaque quae. Magni autem optio cupiditate debitis totam cum officia iste accusantium corporis, earum asperiores ut explicabo vitae, iure in eligendi rem impedit doloribus nobis veniam quaerat? Pariatur sunt autem repudiandae asperiores repellat! Amet harum, vitae et voluptas magnam libero nam repellendus aliquam voluptatibus id quia sunt?</p>
+        <p>Tenho conhecimentos em Back e Front-end. Atualemnte estou focada em aprender mais sobre JavaScript e começando a aprender React.
+          Conheço Python, Java e um pouco de Node.js em Back-End. E, em Front-End, conheço HTML, CSS, JavaScript e um pouco de Bootstrap. 
+        </p>
       </div>
     </section>
-    
 
   </main>
-  <!-- <main>
-    <section id="descricao">
-      <h2>Sobre mim...</h2>
-      <p>Tenho 18 anos e sou uma programadora FullStack Jr!!
-        Tenho Conhecimentos em Front-End e Back-End.
-      </p>
-      <p>Em front-end conheço: 
-        <ul>
-          <li><strong>HTML</strong></li>
-          <li><strong>CSS</strong></li>
-          <li><strong>JavaScript</strong></li>
-          <li><strong>Bootstrap</strong></li>
-        </ul>
-      </p>
-      <p>Em back-end conheço: 
-        <ul>
-          <li><strong>JAVA</strong> - nível Básico a Intermediário</li>
-          <li><strong>Python</strong> - nível Básico a Intermediário</li>
-        </ul>
-      </p>
-      <p>Além disso, sou uma pessoa muito colaborativa e adoro trabalhar em equipe.
-        Gosto bastante de ajudar e sempre estou disposta a aprender e ensinar coisas novas!
-      </p>
-    </section>
-    <section id="ocupacao">
-      <h2>O que faço...</h2>
-      <p>Estou procurando pela minha primeira oportunidade de emprego na área da tecnologia!
-        Atualmente estou cursando Análise e desenvolvimento de sistemas na Unicesumar e fazendo cursos tanto de Back-End quanto de Front-End!
-      </p>
-    </section>
-    <section id="contato">
-      <h2>Contatos</h2>
-      <ul>
-        <a href="https://www.linkedin.com/in/kayrasilvacardoso/" target="_blank">
-          <li><img src="./imagens/linkedin.png" alt="Linkedin"> Linkedin</li>
-        </a>
-        <a href="https://www.instagram.com/dev_kay.0/" target="_blank">
-          <li><img src="./imagens/insta.png" alt="Instagram"> Instagram</li>
-        </a>
-        <a href="https://github.com/KAYSILVHA" target="_blank">
-          <li><img src="./imagens/github.png" alt="GitHub" target="_blank"> GitHub</li>
-        </a>
-        <a href="mailto:kaysilvha@gmail.com" target="_blank">
-          <li><img src="./imagens/mail.png" alt="">E-mail</li>
-        </a>
-        <a href="https://api.whatsapp.com/send?phone=5544991270271&text=Peguei%20seu%20n%C3%BAmero%20no%20seu%20site!%20Podemos%20conversar?" target="_blank">
-          <li><img src="./imagens/tel.png" alt=""> WhatsApp</li>
-        </a>
-      </ul>
-    </section>
-  </main> -->
+
   <footer>
     <section class="contato" id="contato">
       <h2>Contatos</h2>
       <ul>
         <a href="https://www.linkedin.com/in/kayrasilvacardoso/" target="_blank">
-          <li><img src="./imagens/linkedin.png" alt="Linkedin"> Linkedin</li>
+          <li><img src="./imagens/linkedin.png" alt="Linkedin"></li>
         </a>
         <a href="https://www.instagram.com/dev_kay.0/" target="_blank">
-          <li><img src="./imagens/insta.png" alt="Instagram"> Instagram</li>
+          <li><img src="./imagens/insta.png" alt="Instagram"></li>
         </a>
         <a href="https://github.com/KAYSILVHA" target="_blank">
-          <li><img src="./imagens/github.png" alt="GitHub" target="_blank"> GitHub</li>
+          <li><img src="./imagens/github.png" alt="GitHub" target="_blank"></li>
         </a>
         <a href="mailto:kaysilvha@gmail.com" target="_blank">
-          <li><img src="./imagens/mail.png" alt="">E-mail</li>
+          <li><img src="./imagens/mail.png" alt=""></li>
         </a>
         <a href="https://api.whatsapp.com/send?phone=5544991270271&text=Peguei%20seu%20n%C3%BAmero%20no%20seu%20site!%20Podemos%20conversar?" target="_blank">
-          <li><img src="./imagens/tel.png" alt=""> WhatsApp</li>
+          <li><img src="./imagens/tel.png" alt=""></li>
         </a>
       </ul>
     </section>
